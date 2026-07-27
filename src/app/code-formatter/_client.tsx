@@ -164,8 +164,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   "version": "2.1.0",
   "author": {
     "name": "Shabir Ahmad",
-    "email": "shabir@krumb.dev",
-    "url": "https://krumb.dev"
+    "email": "shabir@krumb-dev-five.vercel.app",
+    "url": "https://krumb-dev-five.vercel.app"
   },
   "dependencies": {
     "next": "^14.2.0",

@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://krumb.dev"),
+  metadataBase: new URL("https://krumb-dev-five.vercel.app"),
   title: {
     default:
       "ToolHub — Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
@@ -66,11 +66,14 @@ export const metadata: Metadata = {
       "Free online developer tools. JSON formatter, JWT decoder, regex tester, code beautifier, generators, converters & more. No signup, no upload.",
   },
   alternates: {
-    canonical: "https://krumb.dev",
+    canonical: "https://krumb-dev-five.vercel.app",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  other: {
+    "google-site-verification": "OsByC5U9E_rZJIyOy0mqbaK7uLm9CbOzQnXUpbI6Wb8",
   },
 }
 
@@ -98,8 +101,8 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 name: "KRUMB.DEV",
-                url: "https://krumb.dev",
-                logo: "https://krumb.dev/logo.png",
+                url: "https://krumb-dev-five.vercel.app",
+                logo: "https://krumb-dev-five.vercel.app/logo.png",
                 sameAs: [
                   "https://github.com/krumbdev",
                   "https://x.com/krumbdev",
@@ -109,14 +112,14 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 name: "KRUMB.DEV",
-                url: "https://krumb.dev",
+                url: "https://krumb-dev-five.vercel.app",
                 description:
                   "Free online developer tools — JSON formatter, JWT decoder, regex tester, code beautifier, and more. No signup, no upload.",
                 potentialAction: {
                   "@type": "SearchAction",
                   target: {
                     "@type": "EntryPoint",
-                    urlTemplate: "https://krumb.dev/tools?q={search_term_string}",
+                    urlTemplate: "https://krumb-dev-five.vercel.app/tools?q={search_term_string}",
                   },
                   "query-input": "required name=search_term_string",
                 },

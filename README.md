@@ -83,7 +83,7 @@ The terminal interface is not decorative — it's a deliberate constraint. Every
 # No installation needed.
 # Just open the site:
 
-open https://krumb-dev-five.vercel.app/
+open https://krumb-dev-five.vercel.app
 
 # Or press ⌘K and type the tool you need.
 ```

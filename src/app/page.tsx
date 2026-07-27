@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       'Format JSON, decode JWT, test regex, generate passwords & more. 47 tools, zero signup, runs in your browser.',
   },
   alternates: {
-    canonical: 'https://krumb.dev',
+    canonical: 'https://krumb-dev-five.vercel.app',
   },
 }
 

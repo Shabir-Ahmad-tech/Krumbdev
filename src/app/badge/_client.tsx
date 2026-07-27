@@ -28,7 +28,7 @@ function CopyButton({ text, label }: { text: string; label: string }) {
 }
 
 export default function BadgeClient() {
-  const badgeHtml = `<a href="https://krumb.dev" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 20px; background: #000000; border: 1px solid #333333; text-decoration: none; font-family: 'Courier New', monospace;">
+  const badgeHtml = `<a href="https://krumb-dev-five.vercel.app" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 20px; background: #000000; border: 1px solid #333333; text-decoration: none; font-family: 'Courier New', monospace;">
   <span style="color: #00FF41; font-size: 16px; font-weight: bold;">&gt;</span>
   <div style="display: flex; flex-direction: column;">
     <span style="color: #F9F9F9; font-size: 13px; font-weight: bold; letter-spacing: 0.5px;">KRUMB.DEV</span>
@@ -93,7 +93,7 @@ export default function BadgeClient() {
         <div className="border-t border-[#333333] pt-6 space-y-4">
           <h2 className="text-sm font-heading font-bold text-[#F9F9F9] uppercase tracking-wider">Usage</h2>
           <p className="text-xs font-mono text-[#888888] leading-relaxed">
-            Copy the HTML snippet and paste it anywhere in your site&apos;s HTML. The badge links to krumb.dev and opens in a new tab. No tracking, no JavaScript, no external requests.
+            Copy the HTML snippet and paste it anywhere in your site&apos;s HTML. The badge links to Krumb.Dev and opens in a new tab. No tracking, no JavaScript, no external requests.
           </p>
         </div>
       </div>

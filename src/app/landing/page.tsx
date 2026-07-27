@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       'Format JSON, decode JWT, test regex, generate passwords, and more. Most tools run 100% client-side.',
   },
   alternates: {
-    canonical: 'https://krumb.dev',
+    canonical: 'https://krumb-dev-five.vercel.app',
   },
 }
 

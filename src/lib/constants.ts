@@ -683,7 +683,7 @@ export const SITE_CONFIG = {
   name: 'KRUMB.DEV',
   tagline: 'Developer tools for the modern web',
   description: 'Free online developer tools. No signup required. Instant results.',
-  url: 'https://krumb.dev',
+  url: 'https://krumb-dev-five.vercel.app',
   socialLinks: {
     github: 'https://github.com/krumbdev',
     twitter: 'https://x.com/krumbdev',
