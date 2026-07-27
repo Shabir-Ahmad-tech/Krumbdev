@@ -514,8 +514,8 @@ export default function LandingPage() {
   const [compareRef, compareVisible] = useOnScreen(0.1)
   const [ctaRef, ctaVisible] = useOnScreen(0.15)
 
-  // Hero scramble on "43"
-  const [heroCount, setHeroCount] = useState('43')
+  // Hero scramble on "47"
+  const [heroCount, setHeroCount] = useState('47')
   useEffect(() => {
     if (!heroVisible) return
     let runs = 0
@@ -524,7 +524,7 @@ export default function LandingPage() {
         Array.from({ length: 2 }, () => SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]).join(''),
       )
       runs++
-      if (runs > 12) { clearInterval(t); setHeroCount('43') }
+      if (runs > 12) { clearInterval(t); setHeroCount('47') }
     }, 60)
     return () => clearInterval(t)
   }, [heroVisible])
@@ -705,7 +705,7 @@ export default function LandingPage() {
             transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
           }}
         >
-          <StatBlock label="Developer Tools" value={43} active={statsVisible} />
+          <StatBlock label="Developer Tools" value={47} active={statsVisible} />
           <StatBlock label="Server Uploads" value={0} active={statsVisible} />
           <StatBlock label="Free Forever" value={100} active={statsVisible} suffix="%" />
           <StatBlock label="MIT Licensed" value={1} active={statsVisible} suffix="" />
