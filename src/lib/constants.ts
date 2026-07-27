@@ -312,8 +312,8 @@ export const TOOLS: Tool[] = [
   {
     slug: 'webhook-tester',
     name: 'Webhook Tester',
-    description: 'Generate mock webhook payloads for Stripe, Shopify, and GitHub. Send test requests to local endpoints and inspect responses.',
-    shortDescription: 'Simulate and test webhooks locally',
+    description: 'Generate and simulate webhook payloads for Stripe, Shopify, and GitHub. Inspect request payloads client-side. Sending to endpoints uses a shared edge proxy.',
+    shortDescription: 'Generate and simulate webhook payloads',
     category: 'developer-tools',
     icon: 'Terminal',
     searchKeyword: 'webhook tester',
@@ -494,8 +494,8 @@ export const TOOLS: Tool[] = [
   {
     slug: 'dns-ssl-checker',
     name: 'DNS Lookup & SSL Checker',
-    description: 'Lookup DNS records (A, AAAA, CNAME, MX, NS, TXT) and check SSL certificate validity, expiration, and chain for any domain. Free online network diagnostic tool.',
-    shortDescription: 'Lookup DNS records and verify SSL certificates',
+    description: 'Lookup DNS records (A, AAAA, CNAME, MX, NS, TXT) and check SSL certificate validity, expiration, and chain for any domain. DNS lookups are resolved server-side via a lightweight edge API — no payload logging.',
+    shortDescription: 'Lookup DNS records and verify SSL certificates (edge API)',
     category: 'developer-tools',
     icon: 'Shield',
     searchKeyword: 'dns lookup ssl checker online',

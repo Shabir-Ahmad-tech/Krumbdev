@@ -34,13 +34,14 @@ export default function PrivacyPage() {
               DATA PROCESSING
             </h2>
             <p>
-              KRUMB.DEV processes all tool data entirely in your browser. When you format code, decode tokens,
-              generate passwords, or use any tool on this site, your input data never leaves your device.
+              Most tools on KRUMB.DEV process data entirely in your browser. When you format code, decode tokens,
+              generate passwords, or use most tools on this site, your input data never leaves your device.
             </p>
             <p>
-              This is by design. Every tool runs client-side using JavaScript in your browser.
-              There are no data collection endpoints, analytics tracking that captures input data,
-              or server-side processing pipelines.
+              A small number of tools (DNS lookups, SSL checks, webhook proxying, IP lookup) require
+              lightweight edge API calls for operations browsers cannot perform natively. These APIs do
+              not log your payloads and are purpose-built for each tool. This is disclosed per-tool in
+              the tool description and FAQ.
             </p>
           </section>
 

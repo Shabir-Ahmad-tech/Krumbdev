@@ -18,12 +18,29 @@ export default function ReportBugPage() {
     e.preventDefault()
     setSending(true)
 
-    // Simulate sending (in production, this would POST to an API)
-    await new Promise(r => setTimeout(r, 1000))
+    try {
+      const res = await fetch('/api/report-bug', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
 
-    toast('Report submitted. Thank you!', 'success')
+      if (!res.ok) {
+        const err = await res.json()
+        toast(err.error || 'Failed to send report', 'error')
+        setSending(false)
+        return
+      }
+
+      const data = await res.json()
+      if (data.note) console.warn('[report-bug]', data.note)
+
+      toast('Report submitted. Thank you!', 'success')
+      setForm({ type: 'bug', tool: '', subject: '', description: '', email: '' })
+    } catch {
+      toast('Network error — please try again', 'error')
+    }
     setSending(false)
-    setForm({ type: 'bug', tool: '', subject: '', description: '', email: '' })
   }
 
   return (

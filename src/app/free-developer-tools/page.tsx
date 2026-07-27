@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { TOOLS, BUILT_TOOLS } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Best Free Developer Tools — 46 Online Dev Utilities (No Signup)',
+  title: 'Best Free Developer Tools — Online Dev Utilities (No Signup)',
   description:
-    '46 free online developer tools: JSON formatter, JWT decoder, regex tester, code beautifier, and more. All run in your browser — no upload, no signup.',
+    'Free online developer tools: JSON formatter, JWT decoder, regex tester, code beautifier, and more. All run in your browser — no upload, no signup.',
   openGraph: {
-    title: 'Best Free Developer Tools — 46 Online Dev Utilities (No Signup)',
+    title: 'Best Free Developer Tools — Online Dev Utilities (No Signup)',
     description:
-      '46 free online developer tools: formatters, validators, encoders, generators, playgrounds. Zero server upload, no signup.',
+      'Free online developer tools: formatters, validators, encoders, generators, playgrounds. No signup, private by design.',
     type: 'website',
   },
 }
@@ -198,7 +198,7 @@ const faq = [
   {
     question: 'Are these developer tools really free?',
     answer:
-      'Yes. All 46 tools are completely free to use with no hidden charges, no usage limits, and no signup required. There are no "pro" features locked behind a paywall. Every tool runs entirely in your browser — no server costs for us, no privacy risk for you.',
+      'Yes. All tools are completely free to use with no hidden charges, no usage limits, and no signup required. There are no "pro" features locked behind a paywall. Every tool runs entirely in your browser — no server costs for us, no privacy risk for you.',
   },
   {
     question: 'Do I need to create an account to use these tools?',
@@ -261,7 +261,7 @@ export default function FreeDeveloperToolsPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'CollectionPage',
-            name: '46 Free Developer Tools — Complete Collection',
+            name: 'Free Developer Tools — Complete Collection',
             description: 'Complete collection of free online developer tools by KRUMB.DEV. All tools run in your browser with no signup.',
             url: 'https://toolhub.com/free-developer-tools',
             datePublished: '2026-01-15',
@@ -278,10 +278,10 @@ export default function FreeDeveloperToolsPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            name: '46 Free Developer Tools',
+            name: 'Free Developer Tools',
             description: 'Complete collection of free online developer tools by KRUMB.DEV. JSON formatter, JWT decoder, regex tester, code beautifier, and more.',
             url: 'https://toolhub.com/free-developer-tools',
-            numberOfItems: 46,
+            numberOfItems: 0,
             itemListElement: TOOLS.filter(t => BUILT_TOOLS.includes(t.slug)).map((tool, i) => ({
               '@type': 'ListItem',
               position: i + 1,
@@ -335,11 +335,11 @@ export default function FreeDeveloperToolsPage() {
         {/* ── HERO ──────────────────────────────────── */}
         <div className="space-y-4">
           <h1 className="text-xl md:text-3xl font-heading font-bold text-[#F9F9F9] leading-snug">
-            46 Free Developer Tools — The Complete Collection
+            Free Developer Tools — The Complete Collection
           </h1>
           <p className="text-xs md:text-sm font-mono text-[#888888] leading-relaxed">
             This is the complete guide to every developer tool on ToolHub. From formatting JSON to generating
-            cryptographically secure passwords, all 46 tools are free, require no signup, and process
+            cryptographically secure passwords, all tools are free, require no signup, and process
             everything in your browser. Each tool is described with its exact use case, how it differs
             from alternatives, and why you would use it in your daily workflow.
           </p>
@@ -411,7 +411,7 @@ export default function FreeDeveloperToolsPage() {
           <div className="space-y-4 text-xs md:text-sm font-mono text-[#888888] leading-relaxed">
             <p>
               There are hundreds of free developer tools scattered across the web — individual sites
-              for JSON formatting, code beautifying, Base64 encoding, and so on. ToolHub brings 46 tools
+              for JSON formatting, code beautifying, Base64 encoding, and so on. ToolHub brings Free tools
               into one consistent interface so you do not waste time context-switching between tabs.
               Every tool shares the same terminal-inspired design, the same keyboard shortcuts, and the
               same privacy guarantee: your data stays on your machine.

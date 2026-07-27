@@ -4,23 +4,23 @@ import { useState, useMemo, useEffect } from 'react'
 import { ToolLayout } from '@/components/tools/ToolLayout'
 import { CopyButton } from '@/components/ui/CopyButton'
 import { StatCard } from '@/components/ui/StatCard'
-import { 
-  Terminal, 
-  Search, 
-  Trash2, 
-  History, 
-  Code, 
-  Layers, 
-  FileCode, 
-  AlertCircle, 
-  Info, 
-  Sparkles, 
-  HelpCircle, 
+import {
+  Terminal,
+  Search,
+  Trash2,
+  History,
+  Code,
+  Layers,
+  FileCode,
+  AlertCircle,
+  Info,
+  Sparkles,
+  HelpCircle,
   CheckCircle2
 } from 'lucide-react'
 
 // hardcoded false until auth is wired up
-const PRO_LIMIT = false 
+const PRO_LIMIT = false
 const FREE_LIMIT_HISTORY = 1
 
 interface HeaderItem {
@@ -422,7 +422,7 @@ function getStatusDetails(code: number) {
   if (HTTP_STATUS_GUIDE[code]) {
     return HTTP_STATUS_GUIDE[code]
   }
-  
+
   if (code >= 100 && code < 200) {
     return {
       name: `Informational (${code})`,
@@ -459,7 +459,7 @@ function getStatusDetails(code: number) {
       fixes: 'Check server-side logs and server resource metrics.'
     }
   }
-  
+
   return null
 }
 
@@ -522,7 +522,7 @@ function parseResponse(raw: string): ParsedResult {
   // Parse Status Line & Headers
   if (headersText) {
     const lines = headersText.split(/\r?\n/)
-    
+
     // Check first line for HTTP status
     const firstLine = lines[0].trim()
     const statusLineRegex = /^HTTP\/(?:\d(?:\.\d)?)\s+(\d{3})(?:\s+(.*))?$/i
@@ -555,7 +555,7 @@ function parseResponse(raw: string): ParsedResult {
       if (colonIdx !== -1) {
         const rawKey = line.substring(0, colonIdx).trim()
         const value = line.substring(colonIdx + 1).trim()
-        
+
         // Casing normalization: standard header casing
         const normalizedKey = rawKey.split('-').map(part => {
           if (part.toLowerCase() === 'id') return 'ID'
@@ -586,7 +586,7 @@ function parseResponse(raw: string): ParsedResult {
       // Extract error position
       const posMatch = e.message.match(/position\s+(\d+)/i)
       const position = posMatch ? parseInt(posMatch[1], 10) : -1
-      
+
       const lineColMatch = e.message.match(/line\s+(\d+)\s+column\s+(\d+)/i)
       let errorLine = -1
       let errorCol = -1
@@ -611,7 +611,7 @@ function parseResponse(raw: string): ParsedResult {
       if (errorLine !== -1) {
         const lines = bodyText.split('\n')
         const offendingLine = lines[errorLine - 1] || ''
-        
+
         let indicator = ''
         for (let i = 0; i < errorCol - 1; i++) {
           indicator += offendingLine[i] === '\t' ? '\t' : ' '
@@ -669,7 +669,7 @@ export default function ApiResponseValidatorClient() {
       const headerBytes = parsedResult.headers.map(h => `${h.key}: ${h.value}`).join('\n').length
       const bodyBytes = encoder.encode(parsedResult.bodyText).length
       const totalBytes = encoder.encode(rawInput).length
-      
+
       return {
         headerSizeKB: (headerBytes / 1024).toFixed(3),
         bodySizeKB: (bodyBytes / 1024).toFixed(3),
@@ -713,10 +713,10 @@ export default function ApiResponseValidatorClient() {
         }
       }
 
-      const formatted = headersPart 
+      const formatted = headersPart
         ? `${headersPart}\n\n${parsedResult.jsonFormatted}`
         : parsedResult.jsonFormatted
-      
+
       setRawInput(formatted)
 
       // Save to history
@@ -855,15 +855,15 @@ Content-Type: application/json
   )
 
   return (
-    <ToolLayout 
-      title="API Response Validator" 
-      description="Inspect HTTP response headers, pretty-format JSON payloads, validate JSON syntax errors, and explore HTTP status code guides." 
+    <ToolLayout
+      title="API Response Validator"
+      description="Inspect HTTP response headers, pretty-format JSON payloads, validate JSON syntax errors, and explore HTTP status code guides."
       toolSlug="api-response-validator"
             faq={apiValidatorFaq}
       seoContent={apiValidatorSeo}
     >
       <div className="space-y-6">
-        
+
         {/* Quick Load Examples */}
         <div className="flex flex-wrap gap-2 items-center text-xs">
           <span className="text-[#666666] font-semibold">Load Example:</span>
@@ -922,10 +922,10 @@ Content-Type: application/json
               </div>
             )}
           </div>
-          <textarea 
-            value={rawInput} 
-            onChange={(e) => setRawInput(e.target.value)} 
-            rows={8} 
+          <textarea
+            value={rawInput}
+            onChange={(e) => setRawInput(e.target.value)}
+            rows={8}
             className="w-full px-4 py-3 border border-[#333333] rounded-none font-mono text-xs md:text-sm bg-[#000000] dark:text-slate-100 placeholder-[#555555]"
             placeholder="Paste raw API response here... (Headers first, followed by JSON body)"
           />
@@ -933,20 +933,20 @@ Content-Type: application/json
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <StatCard 
-            label="HTTP Status Code" 
+          <StatCard
+            label="HTTP Status Code"
             value={parsedResult.statusCode ? `${parsedResult.statusCode} ${parsedResult.statusText}` : 'Not Detected'}
-            color={parsedResult.statusCode ? getStatusColor(parsedResult.statusCode) : 'slate'} 
+            color={parsedResult.statusCode ? getStatusColor(parsedResult.statusCode) : 'slate'}
           />
-          <StatCard 
-            label="Body Payload Size" 
-            value={`${stats.bodySizeKB} KB`} 
-            color={parsedResult.jsonValid ? 'green' : parsedResult.bodyText ? 'red' : 'slate'} 
+          <StatCard
+            label="Body Payload Size"
+            value={`${stats.bodySizeKB} KB`}
+            color={parsedResult.jsonValid ? 'green' : parsedResult.bodyText ? 'red' : 'slate'}
           />
-          <StatCard 
-            label="Character Count" 
-            value={`${stats.totalCharCount.toLocaleString()} chars`} 
-            color="indigo" 
+          <StatCard
+            label="Character Count"
+            value={`${stats.totalCharCount.toLocaleString()} chars`}
+            color="indigo"
           />
         </div>
 
@@ -1016,7 +1016,7 @@ Content-Type: application/json
 
         {/* Tab Content Panels */}
         <div className="pt-2">
-          
+
           {/* 1. JSON Body Tab */}
           {activeTab === 'body' && (
             <div className="space-y-4">
@@ -1249,7 +1249,7 @@ Content-Type: application/json
                       {statusDetails.name}
                     </h3>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
                     <div className="space-y-3">
                       <div>
@@ -1437,10 +1437,7 @@ Content-Type: application/json
 
         </div>
       </div>
-      
+
           </ToolLayout>
   )
 }
-
-
-

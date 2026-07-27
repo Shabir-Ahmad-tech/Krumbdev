@@ -31,7 +31,7 @@ export default function AboutPage() {
               <span className="text-[#00FF41] font-mono text-sm">01/</span> Local-First Architecture
             </h3>
             <p className="font-mono text-xs text-[#888888] leading-relaxed">
-              Every operation — from cryptographic key generation to JSON formatting — is executed entirely within your browser's JavaScript sandbox. No input payloads, raw files, or secret tokens are ever transmitted to any external server.
+              Most tools process data entirely within your browser — JSON formatting, code beautification, hash generation, and other operations run client-side with no data transmission. Tools that require server-side logic (DNS lookups, SSL checks, webhook proxying) use purpose-built edge functions that do not log your payloads.
             </p>
           </div>
 

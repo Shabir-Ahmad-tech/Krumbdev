@@ -16,6 +16,9 @@ export function TopBar() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
 
+  // Landing page has its own sticky nav — no TopBar.
+  if (pathname === '/' || pathname === '/landing') return null
+
   const isHome = pathname === '/'
   const isTools = pathname === '/tools'
   const isAbout = pathname === '/about'

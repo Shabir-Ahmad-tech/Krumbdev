@@ -7,13 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 
 export function trackToolUsage(toolSlug: string): void {
   try {
-    fetch('/api/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ tool: toolSlug }),
-      keepalive: true
-    }).catch(() => {})
-
     // Save to localStorage for "Recently Used" feature
     if (typeof window !== 'undefined') {
       const recent = JSON.parse(localStorage.getItem('toolhub-recent') || '[]') as string[]

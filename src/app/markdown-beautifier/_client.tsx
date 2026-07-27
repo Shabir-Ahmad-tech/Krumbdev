@@ -323,7 +323,7 @@ function normalizeHorizontalRules(md: string): string {
     if (inCodeBlock) return line
     // Don't match separator lines that are inside tables (start with |)
     if (trimmed.startsWith('|')) return line
-    return line.replace(/^(\s*)([-*_])\s*\2\s*\2[\s\2]*$/, '$1---')
+    return line.replace(/^(\s*)([-*_])\s*\2\s*\2[\s]*$/, '$1---')
   }).join('\n')
 }
 
@@ -554,7 +554,7 @@ function isHeading(line: string): boolean {
 }
 
 function isHorizontalRule(line: string): boolean {
-  return /^(\s*)([-*_])\s*\2\s*\2[\s\2]*$/.test(line)
+  return /^(\s*)([-*_])\s*\2\s*\2[\s]*$/.test(line)
 }
 
 // ============================================================

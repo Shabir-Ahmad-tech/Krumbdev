@@ -624,3 +624,92 @@
 .boot-line-enter {
   animation: boot-line-reveal 0.35s ease-out forwards;
 }
+
+/* ── LANDING PAGE ANIMATIONS ─────────────────────────────── */
+
+/* Triangle logo drift — slow continuous rotation */
+@keyframes triangle-drift {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(4deg) translateY(-8px); }
+  50% { transform: rotate(0deg) translateY(0); }
+  75% { transform: rotate(-4deg) translateY(8px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+.triangle-drift {
+  animation: triangle-drift 20s ease-in-out infinite;
+}
+
+/* Marquee ticker — infinite horizontal scroll */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Final CTA glow pulse */
+@keyframes cta-glow-pulse {
+  0%, 70%, 100% { box-shadow: 0 0 0px rgba(0, 255, 65, 0); }
+  85% { box-shadow: 0 0 20px rgba(0, 255, 65, 0.3); }
+  92% { box-shadow: 0 0 0px rgba(0, 255, 65, 0); }
+}
+
+/* Hex/code debris drift */
+@keyframes hex-drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(20px, -30px) rotate(5deg); }
+  50% { transform: translate(-15px, -50px) rotate(-3deg); }
+  75% { transform: translate(10px, -20px) rotate(4deg); }
+}
+
+/* Floating particle drift */
+@keyframes particle-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.3; }
+  50% { transform: translate(15px, -25px) rotate(90deg); }
+  80% { opacity: 0.2; }
+}
+
+/* Shimmer line expand from center */
+@keyframes shimmer-expand {
+  0% { transform: scaleX(0); opacity: 0; }
+  100% { transform: scaleX(1); opacity: 0.4; }
+}
+
+/* Card staggered entrance */
+@keyframes card-enter {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* CTA jitter entrance */
+@keyframes cta-jitter-in {
+  0% { opacity: 0; transform: translateX(-15px); }
+  40% { opacity: 1; transform: translateX(2px); }
+  70% { transform: translateX(-1px); }
+  100% { transform: translateX(0); }
+}
+
+/* Subtle bounce for scroll hint */
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* ── REDUCED MOTION ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .triangle-drift { animation: none; }
+  .marquee-track { animation: none; }
+  .cta-pulse-btn { animation: none !important; }
+  .cta-jitter-in, .card-enter, .shimmer-expand { animation: none !important; opacity: 1 !important; }
+  .animate-bounce-subtle, .animate-terminal-blink, .animate-particle-float { animation: none !important; }
+  .animate-pulse { animation: none !important; }
+}

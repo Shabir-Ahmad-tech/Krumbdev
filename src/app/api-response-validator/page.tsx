@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import ApiResponseValidatorClient from './ApiResponseValidatorClient'
+import ApiResponseValidatorClient from './_client'
 
 export const metadata: Metadata = {
   title: 'API Response Validator â�--�-- Free Online Header & JSON Parser',

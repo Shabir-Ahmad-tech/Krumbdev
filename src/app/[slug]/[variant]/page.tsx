@@ -8,21 +8,19 @@ import { RelatedTools } from '@/components/tools/RelatedTools'
 // ── Static generation ──────────────────────────────────────
 
 export function generateStaticParams() {
-  return SEO_VARIANTS.map((v) => ({
-    slug: v.toolSlug,
-    variant: v.slug,
-  }))
+  return []
 }
 
 // ── Metadata ───────────────────────────────────────────────
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string; variant: string }
-}): Metadata {
+  params: Promise<{ slug: string; variant: string }>
+}): Promise<Metadata> {
+  const { slug, variant } = await params
   const entry = SEO_VARIANTS.find(
-    (v) => v.toolSlug === params.slug && v.slug === params.variant,
+    (v) => v.toolSlug === slug && v.slug === variant,
   )
   if (!entry) return {}
   return {
@@ -38,13 +36,14 @@ export function generateMetadata({
 
 // ── Page ───────────────────────────────────────────────────
 
-export default function VariantPage({
+export default async function VariantPage({
   params,
 }: {
-  params: { slug: string; variant: string }
+  params: Promise<{ slug: string; variant: string }>
 }) {
+  const { slug, variant } = await params
   const entry = SEO_VARIANTS.find(
-    (v) => v.toolSlug === params.slug && v.slug === params.variant,
+    (v) => v.toolSlug === slug && v.slug === variant,
   )
   if (!entry) notFound()
 
@@ -173,9 +172,9 @@ export default function VariantPage({
             href="/free-developer-tools"
             className="text-[#888888] hover:text-[#F9F9F9] underline underline-offset-4 decoration-[#333333] transition-none"
           >
-            collection of 46 free developer tools
+            collection of free developer tools
           </Link>
-          . Each tool runs entirely in your browser — no signup, no server upload.
+          . No signup required — most tools process data entirely in your browser.
         </p>
 
         {/* ── CTA ─────────────────────────────────────── */}

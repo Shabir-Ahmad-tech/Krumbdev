@@ -20,13 +20,13 @@ export function Footer() {
   return (
     <footer className="bg-[#000000] border-t border-[#333333] mt-16 select-none">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-6 py-6">
-        {/* Left: Brand + copyright + [ SYSTEM OFFLINE ] */}
+        {/* Left: Brand + copyright + status */}
         <div className="flex items-center gap-3 flex-wrap justify-center">
           <span className="text-xs font-mono text-[#888888]">
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}
           </span>
           <span className="text-[10px] font-mono text-[#555555] uppercase tracking-wider">
-            [ SYSTEM OFFLINE ]
+            [ v0.1 ]
           </span>
         </div>
 

@@ -1,6 +1,6 @@
-# ToolHub — 43 Developer Tools, Zero Server, One URL
+# ToolHub — Developer Tools, One URL
 
-> **Client-side developer tools for formatting, encoding, validating, generating, and converting code — all in your browser, no backend, no database, no signup.**
+> **Browser-based developer tools for formatting, encoding, validating, generating, and converting code. Most tools are fully client-side; tools that need server logic (DNS, SSL, webhook proxying) use purpose-built edge functions with no payload logging.**
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Shabir-Ahmad-tech/toolhub)
 
@@ -175,7 +175,7 @@ The app requires **zero environment variables** to function. No database URL, no
 | **Build** | `npm run build` — generates all tools + SEO variants statically |
 | **Routing** | Next.js App Router — all routes pre-rendered at build time |
 | **API routes** | Three minimal routes (`track`, `webhook-proxy`, `dns-ssl-lookup`) — run as Vercel Edge Functions |
-| **Static pages** | ~70 pages generated (43 tools + 12 SEO variants + static pages) |
+| **Static pages** | 65 pages generated (47 tools + 12 SEO variants + static pages + API routes) |
 | **SSL** | Auto-provisioned by Vercel |
 | **CDN** | Vercel Edge Network |
 

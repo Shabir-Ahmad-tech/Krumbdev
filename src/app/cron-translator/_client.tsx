@@ -59,20 +59,20 @@ function describeSingleField(field: string, type: 'minute' | 'hour' | 'dom' | 'm
   }
 
   // Single value
-  const num = parseInt(normalized(field), 10)
+  const num = parseInt(normalizeField(field), 10)
   switch (type) {
     case 'minute':
       if (field === '0') return 'at minute 0'
       if (field === '30') return 'at minute 30'
-      return `at minute ${normalized(field)}`
+      return `at minute ${normalizeField(field)}`
     case 'hour':
-      return `at ${normalized(field).padStart(2, '0')}:00`
+      return `at ${normalizeField(field).padStart(2, '0')}:00`
     case 'dom':
-      return `on day ${normalized(field)}`
+      return `on day ${normalizeField(field)}`
     case 'month':
-      return `in ${MONTH_NAMES[num] || normalized(field)}`
+      return `in ${MONTH_NAMES[num] || normalizeField(field)}`
     case 'dow':
-      return `on ${DOW_NAMES[num] || normalized(field)}`
+      return `on ${DOW_NAMES[num] || normalizeField(field)}`
   }
 }
 

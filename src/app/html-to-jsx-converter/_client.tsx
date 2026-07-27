@@ -73,7 +73,7 @@ function convertHtmlToJsx(html: string): string {
 
     // Convert kebab-case to camelCase (general case)
     if (attr.includes('-')) {
-      const camel = attr.replace(/-([a-z])/g, (_, c) => c.toUpperCase())
+      const camel = attr.replace(/-([a-z])/g, (_match: string, c: string) => c.toUpperCase())
       return `${camel}="${val}"`
     }
 

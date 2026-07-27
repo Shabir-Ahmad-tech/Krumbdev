@@ -58,7 +58,7 @@ export default function ToolsPage() {
 
   const bootMessages = [
     'SYS_INIT: loading tool directory...',
-    'SYS_INIT: mounting 46 developer tools...',
+    'SYS_INIT: mounting developer tools...',
     'SYS_INIT: all systems ready.',
   ]
 

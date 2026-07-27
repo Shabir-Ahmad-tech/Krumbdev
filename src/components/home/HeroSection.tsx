@@ -129,7 +129,7 @@ export function HeroSection() {
           <span className="text-[#00FF41]">&gt;</span> KRUMB.DEV
         </h1>
         <p className="text-base md:text-lg text-[#888888] mb-8 select-none">
-          &gt; Zero-server dev toolkit. Paste your payload below.
+          &gt; Developer tools that run in your browser. Privacy-first by design.
         </p>
 
         <div className="w-full relative">
@@ -269,20 +269,20 @@ export function HeroSection() {
         )}
       </section>
 
-      {/* ===== EXECUTION POLICY ===== */}
+      {/* ===== PRIVACY NOTE ===== */}
       <section className="pb-24 w-full">
         <div className="border-l-4 border-[#00FF41] pl-6 py-1.5">
           <h2 className="font-heading text-2xl font-bold uppercase mb-4 text-[#F9F9F9]">
-            Execution Policy
+            Privacy
           </h2>
           <p className="text-[#888888] leading-relaxed mb-4 text-xs md:text-sm">
-            KRUMB.DEV operates on a strict zero-server-call architecture. Every
-            conversion, hash generation, and formatting task executes entirely
-            within your browser&apos;s JavaScript engine.
+            Most tools process data entirely in your browser. Tools that require
+            server-side logic (DNS lookups, SSL checks, webhook proxying) use
+            purpose-built edge functions and do not log your payloads.
           </p>
           <p className="text-[#888888] leading-relaxed text-xs md:text-sm">
-            We maintain no database storage, record no server logs, and do not
-            track your payload data. Your code remains yours.
+            No analytics cookies, no user tracking, no database storage. What you
+            paste stays between you and the browser tab.
           </p>
         </div>
       </section>

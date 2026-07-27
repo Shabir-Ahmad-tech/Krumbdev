@@ -47,7 +47,7 @@ export default function HtmlToMarkdownConverter() {
   const [output, setOutput] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
-  const turndownRef = useRef<ReturnType<typeof TurndownService> | null>(null)
+  const turndownRef = useRef<InstanceType<typeof TurndownService> | null>(null)
 
   // Load turndown dynamically (it's a large module)
   useEffect(() => {

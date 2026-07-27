@@ -30,7 +30,7 @@ Data-driven variant pages at `[slug]/[variant]`:
 - Variants cataloged: code-formatter (4 language variants), json-formatter (2), password-generator (2), regex-tester (2), unix-timestamp-converter (2)
 
 ### Internal Linking Strategy
-- Every variant page links to `/free-developer-tools` ("collection of 46 free developer tools")
+- Every variant page links to `/free-developer-tools` ("collection of free developer tools")
 - Footer has "Free Dev Tools Guide" link to `/free-developer-tools`
 - /free-developer-tools page links to all 21 tools by category
 - `<RelatedTools>` component on all tool pages links to related tools
@@ -41,7 +41,7 @@ Data-driven variant pages at `[slug]/[variant]`:
 - SITE_CONFIG.socialLinks.github: `https://github.com/krumbdev`
 
 ### Built Tools Status
-46 tools in BUILT_TOOLS array. All tools have working client-side logic, FAQ entries, seoContent JSX, and ToolLayout integration.
+Free tools in BUILT_TOOLS array. All tools have working client-side logic, FAQ entries, seoContent JSX, and ToolLayout integration.
 
 ### Meta Description < 160 chars — Verified
 All page meta descriptions audited and fixed for the 160-character limit.
@@ -73,7 +73,7 @@ Working + unique content + schema + internal links + mobile-verified + zero prem
 
 3. **Product Hunt Launch (see PRODUCT_HUNT_DESCRIPTION.md)**
 
-4. **Dev.to / Hashnode Article** — "I Built 46 Free Dev Tools That Run 100% Locally"
+4. **Dev.to / Hashnode Article** — "Building Free Dev Tools That Run Locally"
 
 ### High-Impact New Tools to Build (Ranked by SEO Potential)
 
@@ -110,7 +110,7 @@ These are developer tools with high estimated monthly search volume and relative
 
 4. **Backlink Acquisition**
    - **Product Hunt Launch**: Create launch page for KRUMB.DEV. Target catgeory: Developer Tools, Tech, SaaS
-   - **Dev.to / Hashnode / Medium**: Publish "I Built 46 Free Dev Tools That Run 100% in Your Browser" — organic reach + dofollow backlink
+   - **Dev.to / Hashnode / Medium**: Publish "Building Free Dev Tools That Run in Your Browser" — organic reach + dofollow backlink
    - **GitHub Awesome Lists**: Submit to awesome-developer-tools, awesome-web-dev, awesome-selfhosted
    - **AlternativeTo.net**: List as alternative to Regex101, JWT.io, CodePen, etc.
    - **BetaList**: Early-stage product listing

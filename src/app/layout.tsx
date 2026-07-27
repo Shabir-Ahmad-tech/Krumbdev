@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://krumb.dev"),
   title: {
     default:
-      "ToolHub — 46 Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
+      "ToolHub — Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
     template: "%s — ToolHub | KRUMB.DEV",
   },
   description:
-    "46 free online developer tools — JSON formatter, JWT decoder, regex tester, code beautifier, password generator, base64 encoder, and more. No signup, no upload, instant results.",
+    "Free online developer tools — JSON formatter, JWT decoder, regex tester, code beautifier, password generator, base64 encoder, and more. No signup, no upload, instant results.",
   keywords: [
     "free developer tools", "online developer tools", "dev tools online",
     "JSON formatter", "JWT decoder", "regex tester", "code formatter",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "ToolHub — 46 Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
+      "ToolHub — Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
     description:
-      "46 free online developer tools. JSON formatter, JWT decoder, regex tester, code beautifier, generators, converters & more. No signup, no upload.",
+      "Free online developer tools. JSON formatter, JWT decoder, regex tester, code beautifier, generators, converters & more. No signup, no upload.",
     type: "website",
     siteName: "KRUMB.DEV",
     locale: "en_US",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@krumbdev",
-    title: "ToolHub — 46 Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
+    title: "ToolHub — Free Developer Tools: JSON Formatter, Regex Tester, Code Beautifier & More",
     description:
-      "46 free online developer tools. JSON formatter, JWT decoder, regex tester, code beautifier, generators, converters & more. No signup, no upload.",
+      "Free online developer tools. JSON formatter, JWT decoder, regex tester, code beautifier, generators, converters & more. No signup, no upload.",
   },
   alternates: {
     canonical: "https://krumb.dev",

@@ -92,8 +92,7 @@ function generatePalette(baseHex: string, type: PaletteType): PaletteColor[] {
     case 'complementary': {
       // Base + 180°, with accent variants
       const comp = (hsl.h + 180) % 360
-      const baseLight = { r: hslToRgb(hsl.h, hsl.s, Math.min(100, hsl.l + 15)), g: 0, b: 0 } as { r: number; g: number; b: number }
-      ;({ r: baseLight.r, g: baseLight.g, b: baseLight.b } = hslToRgb(hsl.h, hsl.s, Math.min(100, hsl.l + 15)))
+      const baseLight = hslToRgb(hsl.h, hsl.s, Math.min(100, hsl.l + 15))
       const compLight = hslToRgb(comp, hsl.s, Math.min(100, hsl.l + 15))
       const baseDark = hslToRgb(hsl.h, hsl.s, Math.max(0, hsl.l - 15))
       const compDark = hslToRgb(comp, hsl.s, Math.max(0, hsl.l - 15))
