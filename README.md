@@ -1,69 +1,111 @@
-# KRUMB.DEV — 47 Free Developer Tools
+<p align="center">
+  <img src="public/icons/logo-icon.svg" alt="KRUMB.DEV" width="80" />
+</p>
 
-**A focused collection of developer utilities that run entirely in your browser. No signup, no uploads, no ads.**
+<h1 align="center">KRUMB.DEV</h1>
 
-[![KRUMB.DEV](https://img.shields.io/badge/krumb.dev-000000?style=for-the-badge&logo=vercel&logoColor=00FF41)](https://krumb.dev)
-[![GitHub](https://img.shields.io/badge/github-000000?style=for-the-badge&logo=github&logoColor=00FF41)](https://github.com/Shabir-Ahmad-tech/toolhub)
+<p align="center">
+  <strong>47 Developer Tools · Zero Signup · Zero Upload · Zero Tracking</strong>
+</p>
 
----
+<p align="center">
+  <a href="https://krumb-dev-five.vercel.app/">🌐 Live Site</a> ·
+  <a href="https://github.com/Shabir-Ahmad-tech/toolhub">📦 Source</a>
+</p>
 
-## What It Is
-
-**KRUMB.DEV is your browser's new toolbox.** Instead of searching for a different site every time you need to format JSON, decode a JWT, test a regex, minify some JS, or convert colors — there's one URL.
-
-Every tool is immediate. Open the page and it works. No account creation, no API keys, no "start your free trial." Your data stays on your machine because everything runs client-side.
-
-**47 tools covering the spectrum of daily development work:**
-
-| | | |
-|---|---|---|
-| JSON Formatter & Validator | JWT Decoder | Regex Tester |
-| Code Beautifier (17 languages) | SQL Formatter (17 dialects) | HTML/CSS/JS Minifiers |
-| Base64 Encoder / Decoder | URL Encoder / Decoder | Hash Generator (MD5, SHA, HMAC) |
-| UUID Generator (v1/v3/v4/v5) | Password Generator | Unix Timestamp Converter |
-| YAML ↔ JSON Converter | JSON ↔ CSV Converter | Diff Checker |
-| cURL → Code Converter | HTML ↔ Markdown Converter | HTML → JSX Converter |
-| HTTP Status Code Reference | Cron Expression Builder & Translator | DNS Lookup & SSL Checker |
-| CSS Gradient Generator | CSS Box Shadow Generator | CSS Grid Generator |
-| Color Palette Generator | Lorem Ipsum Generator | Case Converter |
-| SVG → JSX Converter | JSON → TypeScript Generator | Meta Tag Generator |
-| QR Code Generator & Decoder | IBAN Validator | .gitignore Generator |
-| Robots.txt & Sitemap Generator | Webhook Tester | API Response Validator |
-| Hex ↔ RGB Converter | Binary Converter | Markdown Editor |
-| HTML Playground | Code Playground | And more… |
-
-Plus **SEO-optimized landing pages** for specific searches like "JavaScript regex tester," "JSON beautifier," "strong password generator," and more — all auto-generated and pre-rendered.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-live-00FF41?style=flat-square" />
+  <img src="https://img.shields.io/badge/tools-47-000000?style=flat-square" />
+  <img src="https://img.shields.io/badge/license-MIT-000000?style=flat-square" />
+  <img src="https://img.shields.io/badge/privacy-first-00FF41?style=flat-square" />
+</p>
 
 ---
 
-## Design Philosophy
+**KRUMB.DEV is a privacy-first toolkit for developers.** Format JSON, decode JWTs, test regular expressions, minify code, generate passwords, convert between formats, and dozens more — all inside your browser. Nothing is uploaded. Nothing is tracked. No account required.
 
-**The terminal is not a gimmick.** The interface strips away everything that doesn't serve the task — no sidebars fighting for attention, no floating chat bubbles, no "would you like to upgrade?" banners. A dark field, a monospace prompt, and the tool.
-
-- **Zero server uploads** — sensitive code, tokens, and data never leave your device
-- **Zero accounts** — no "sign up to format JSON" nonsense
-- **Zero tracking** — no analytics scripts on any tool page
-- **Keyboard-first** — tab through fields, copy with one click, stay in flow
+> If you've ever hesitated before pasting a JWT or a private key into a random website, this is the alternative you've been looking for.
 
 ---
 
-## Who It's For
+## Why KRUMB.DEV?
 
-- **Full-stack developers** who need JSON tools, code formatters, and converters daily
-- **Security-minded engineers** who won't paste JWTs or private keys into random websites
-- **DevOps / SRE** who frequently reference HTTP status codes, build cron schedules, or check DNS records
-- **Anyone learning to code** who wants a safe, local sandbox (HTML Playground, Regex Tester, Code Playground)
+Most developer tool websites share the same pattern: create an account, hit a rate limit, endure sidebar ads, and wonder if your paste is being logged somewhere. KRUMB.DEV was built differently.
+
+| Other Sites | KRUMB.DEV |
+|---|---|
+| Your data is sent to a server for processing | **Everything runs in your browser — 100% client-side** |
+| Sign up required for basic features | **Zero accounts. Open the page, use the tool.** |
+| Ads, popups, and upgrade prompts | **Clean terminal interface. No distractions.** |
+| One tool, one bookmark, one tab | **47 tools at a single URL** |
+| Unknown data retention policies | **Your data never leaves your device** |
+
+### Privacy, explained plainly
+
+- JSON payloads, tokens, source code, and passwords are processed locally using browser APIs (`Web Crypto`, `TextEncoder`, native parsers)
+- Tools that require server interaction (DNS lookups, SSL certificate checks, webhook proxying) use lightweight edge functions that log nothing and retain no payloads
+- No analytics scripts run on any tool page
+- No cookies, no fingerprinting, no tracking
 
 ---
 
-## Live Demo
+## Tools
 
-**→ [https://krumb.dev](https://krumb.dev)**
+All 47 tools are organized by category. Open any one in seconds.
 
-No install, no signup. Open the URL and use any tool immediately.
+**Formatters & Validators** · JSON Formatter · JSON Validator · Code Beautifier (17 languages) · SQL Formatter (17 dialects) · HTML Minifier · JavaScript Minifier · CSS Grid Generator · API Response Validator
+
+**Encoders & Decoders** · Base64 Encoder/Decoder · URL Encoder/Decoder · JWT Decoder · HTML to Markdown · HTML to JSX · YAML ↔ JSON · JSON ↔ CSV · Case Converter
+
+**Generators** · Password Generator · UUID Generator (v1/v3/v4/v5) · Hash Generator (MD5, SHA, HMAC) · QR Code Generator · Lorem Ipsum Generator · Color Palette Generator · CSS Gradient Generator · CSS Box Shadow Generator · Meta Tag Generator · Robots.txt & Sitemap Generator · .gitignore Generator
+
+**Testing & Debugging** · Regex Tester · Diff Checker · Webhook Tester (Stripe/GitHub/Shopify) · cURL → Code Converter · HTTP Status Code Reference · Cron Expression Builder · Cron Translator
+
+**Converters** · Unix Timestamp Converter · Hex ↔ RGB · Binary Converter · SVG → JSX · JSON → TypeScript · HTML Playground · Markdown Editor
+
+**Network & Security** · DNS Lookup & SSL Checker · QR Code Decoder · IP Address Lookup · IBAN Validator
+
+---
+
+## Design
+
+The terminal interface is not decorative — it's a deliberate constraint. Every tool fits inside a single-column, monospace layout with no sidebar, no floating widgets, and no visual noise. The result is an environment where the tool and its output are the only things on screen.
+
+- **⌘K** opens a command palette to instantly jump to any tool
+- Every output block has a one-click copy button
+- All state is local — refreshing the page resets nothing on the server because there is no server
+
+---
+
+## Getting Started
+
+```bash
+# No installation needed.
+# Just open the site:
+
+open https://krumb-dev-five.vercel.app/
+
+# Or press ⌘K and type the tool you need.
+```
+
+That's it. No `npm install`, no environment variables, no database migrations.
+
+---
+
+## Deployment
+
+KRUMB.DEV is a static-first Next.js application. It requires no database, no API keys, and no backend services to run. To deploy your own instance or contribute:
+
+```bash
+git clone https://github.com/Shabir-Ahmad-tech/toolhub.git
+cd toolhub
+npm install
+npm run dev       # local development
+npm run build     # static production build
+```
 
 ---
 
 ## License
 
-MIT — do whatever you want with it.
+MIT — use it, modify it, deploy it. Attribution is appreciated but not required.
