@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/krumb-icon.svg",
+        url: "/logo.png",
         width: 1200,
         height: 1200,
         alt: "KRUMB.DEV — Free Developer Tools",
