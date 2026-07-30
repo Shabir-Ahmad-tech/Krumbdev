@@ -177,20 +177,26 @@ function GlitchOverlay() {
 
 // ── Floating Hex / Code Debris ──
 function HexDebris({ count = 12 }: { count?: number }) {
-  const [particles] = useState(() =>
-    Array.from({ length: count }, (_, i) => ({
-      id: i,
-      text: Array.from({ length: 2 + Math.floor(Math.random() * 6) }, () =>
-        HEX_CHARS[Math.floor(Math.random() * 16)]
-      ).join(''),
-      x: Math.random() * 100,
-      y: 10 + Math.random() * 80,
-      size: 9 + Math.random() * 4,
-      delay: Math.random() * 15,
-      duration: 20 + Math.random() * 25,
-      opacity: 0.04 + Math.random() * 0.06,
-    }))
-  )
+  const [particles, setParticles] = useState<Array<{ id: number; text: string; x: number; y: number; size: number; delay: number; duration: number; opacity: number }>>([])
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: count }, (_, i) => ({
+        id: i,
+        text: Array.from({ length: 2 + Math.floor(Math.random() * 6) }, () =>
+          HEX_CHARS[Math.floor(Math.random() * 16)]
+        ).join(''),
+        x: Math.random() * 100,
+        y: 10 + Math.random() * 80,
+        size: 9 + Math.random() * 4,
+        delay: Math.random() * 15,
+        duration: 20 + Math.random() * 25,
+        opacity: 0.04 + Math.random() * 0.06,
+      }))
+    )
+  }, [count])
+
+  if (particles.length === 0) return null
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
@@ -216,31 +222,37 @@ function HexDebris({ count = 12 }: { count?: number }) {
 
 // ── Background Terminal Debris (command fragments) ──
 function TerminalDebris() {
-  const [lines] = useState(() =>
-    Array.from({ length: 6 }, (_, i) => ({
-      id: i,
-      text: [
-        'root@krumb:~# nmap -sV target',
-        '> initializing payload... done',
-        '$ curl -s https://api.github.com',
-        'SSH-2.0-OpenSSH_9.0',
-        'GET / HTTP/1.1 200 OK',
-        'traceroute to 8.8.8.8...',
-        '[INFO] processing complete',
-        'HTTP/2 200 1432 bytes',
-        '>>> decrypting payload...',
-        'CONNECT wss://krumb.dev:443',
-        './configure --prefix=/usr',
-        'make -j$(nproc) 2>&1',
-      ][i % 12],
-      x: -5 + Math.random() * 30,
-      y: 15 + Math.random() * 70,
-      size: 8 + Math.random() * 3,
-      delay: Math.random() * 20,
-      duration: 25 + Math.random() * 20,
-      opacity: 0.03 + Math.random() * 0.04,
-    }))
-  )
+  const [lines, setLines] = useState<Array<{ id: number; text: string; x: number; y: number; size: number; delay: number; duration: number; opacity: number }>>([])
+
+  useEffect(() => {
+    setLines(
+      Array.from({ length: 6 }, (_, i) => ({
+        id: i,
+        text: [
+          'root@krumb:~# nmap -sV target',
+          '> initializing payload... done',
+          '$ curl -s https://api.github.com',
+          'SSH-2.0-OpenSSH_9.0',
+          'GET / HTTP/1.1 200 OK',
+          'traceroute to 8.8.8.8...',
+          '[INFO] processing complete',
+          'HTTP/2 200 1432 bytes',
+          '>>> decrypting payload...',
+          'CONNECT wss://krumb.dev:443',
+          './configure --prefix=/usr',
+          'make -j$(nproc) 2>&1',
+        ][i % 12],
+        x: -5 + Math.random() * 30,
+        y: 15 + Math.random() * 70,
+        size: 8 + Math.random() * 3,
+        delay: Math.random() * 20,
+        duration: 25 + Math.random() * 20,
+        opacity: 0.03 + Math.random() * 0.04,
+      }))
+    )
+  }, [])
+
+  if (lines.length === 0) return null
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
@@ -301,17 +313,25 @@ function useCountUp(target: number, active: boolean, duration = 1800): number {
   return count
 }
 
-/** Floating particles generator — static positions, animated via CSS */
+/** Floating particles generator — client-only mounted position generation */
 function useParticles(count: number) {
-  return Array.from({ length: count }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: 1 + Math.random() * 2.5,
-    delay: Math.random() * 8,
-    duration: 8 + Math.random() * 12,
-    opacity: 0.15 + Math.random() * 0.25,
-  }))
+  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; delay: number; duration: number; opacity: number }>>([])
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: count }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: 1 + Math.random() * 2.5,
+        delay: Math.random() * 8,
+        duration: 8 + Math.random() * 12,
+        opacity: 0.15 + Math.random() * 0.25,
+      }))
+    )
+  }, [count])
+
+  return particles
 }
 
 // ── Sub-components ──

@@ -32,8 +32,19 @@ const LANGUAGES = [
 
 const DEFAULT_CODE: Record<string, string> = {
   javascript: `// JavaScript Playground
-...
-// Try modifying the number above!
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+
+console.log("Original numbers:", numbers);
+console.log("Doubled numbers:", doubled);
+
+function calculateStats(arr) {
+  const sum = arr.reduce((acc, curr) => acc + curr, 0);
+  const avg = sum / arr.length;
+  return { sum, avg };
+}
+
+console.log("Stats for doubled array:", calculateStats(doubled));
 `,
   typescript: `// TypeScript Playground
 interface User {
@@ -243,19 +254,17 @@ export default function CodePlaygroundClient() {
       }
 
       if (language === 'html') {
-        // Run HTML in iframe
         const iframe = iframeRef.current
         if (iframe) {
           iframe.srcdoc = code
         }
-        setOutput('�--- HTML rendered in preview panel �--')
+        setOutput('✓ HTML rendered in preview panel')
       } else if (language === 'javascript' || language === 'typescript') {
-        // Run JS/TS in sandboxed iframe
         const iframe = iframeRef.current
         if (iframe) {
           const wrappedCode = language === 'typescript'
-            ? `// TypeScript will be transpiled\ntry {\n${code}\n} catch (e) { console.error(e); }`
-            : `try {\n${code}\n} catch (e) { console.error(e); }`
+            ? `try {\n${code}\n} catch (e) { console.error(e.message || e); }`
+            : `try {\n${code}\n} catch (e) { console.error(e.message || e); }`
 
           const htmlContent = `
             <!DOCTYPE html>
@@ -263,51 +272,41 @@ export default function CodePlaygroundClient() {
               <head>
                 <meta charset="UTF-8">
                 <style>
-                  body { font-family: monospace; padding: 16px; background: #1e1e1e; color: #d4d4d4; margin: 0; }
-                  .log { color: #9cdcfe; }
-                  .error { color: #f44747; }
-                  .warn { color: #cca700; }
-                  .info { color: #4ec9b0; }
+                  body { font-family: monospace; padding: 16px; background: #000000; color: #00FF41; margin: 0; font-size: 13px; line-height: 1.6; }
+                  .log { color: #00FF41; }
+                  .error { color: #FF4444; }
+                  .warn { color: #FFB800; }
+                  .info { color: #00E5FF; }
                 </style>
               </head>
               <body>
                 <script>
-                  const originalLog = console.log;
-                  const originalError = console.error;
-                  const originalWarn = console.warn;
-                  const originalInfo = console.info;
-
                   function format(...args) {
-                    return args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : a).join(' ');
+                    return args.map(a => typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a)).join(' ');
                   }
-
                   console.log = (...args) => {
                     const div = document.createElement('div');
                     div.className = 'log';
                     div.textContent = '> ' + format(...args);
                     document.body.appendChild(div);
-                    originalLog.apply(console, args);
                   };
                   console.error = (...args) => {
                     const div = document.createElement('div');
                     div.className = 'error';
-                    div.textContent = '�-- ' + format(...args);
+                    div.textContent = '[ERROR] ' + format(...args);
                     document.body.appendChild(div);
-                    originalError.apply(console, args);
                   };
                   console.warn = (...args) => {
                     const div = document.createElement('div');
                     div.className = 'warn';
-                    div.textContent = '�-- ' + format(...args);
+                    div.textContent = '[WARN] ' + format(...args);
                     document.body.appendChild(div);
-                    originalWarn.apply(console, args);
                   };
                   console.info = (...args) => {
                     const div = document.createElement('div');
                     div.className = 'info';
-                    div.textContent = '�-- ' + format(...args);
+                    div.textContent = '[INFO] ' + format(...args);
                     document.body.appendChild(div);
-                    originalInfo.apply(console, args);
                   };
                 </script>
                 <script>${wrappedCode}</script>
@@ -316,11 +315,10 @@ export default function CodePlaygroundClient() {
           `
           iframe.srcdoc = htmlContent
         }
-        setOutput('�-- Executed in preview panel �--')
+        setOutput('✓ Executed in preview panel')
       } else if (language === 'python') {
-        // Run Python via Pyodide
         if (!(window as any).pyodide) {
-          setOutput('�-- Loading Python runtime...')
+          setOutput('> Loading Python runtime (Pyodide Wasm)...')
           await loadPyodide()
         }
         const pyodide = (window as any).pyodide
@@ -338,7 +336,7 @@ output = sys.stdout.getvalue()
 sys.stdout = old_stdout
 output
 `)
-            setOutput(result || '�-- Code executed (no output)')
+            setOutput(result || '✓ Code executed (no output printed)')
           } catch (e: any) {
             pyodide.runPython('sys.stdout = old_stdout')
             setError(e.message || 'Python execution error')
