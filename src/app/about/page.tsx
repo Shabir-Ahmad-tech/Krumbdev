@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About KRUMB.DEV — Privacy-First Developer Tools',
-  description: 'KRUMB.DEV is a collection of 47 free developer tools that run entirely in your browser. No signup, no uploads, no tracking. Built for developers who value privacy.',
+  description: 'KRUMB.DEV is a collection of 55 free developer tools that run entirely in your browser. No signup, no uploads, no tracking. Built for developers who value privacy.',
   alternates: {
     canonical: './'
   }
@@ -20,7 +20,7 @@ export default function AboutPage() {
             <span className="text-[#00FF41] font-mono text-xl mr-3">&gt;</span>ABOUT
           </h1>
           <p className="font-mono text-xs md:text-sm text-[#888888] leading-relaxed">
-            A privacy-first toolkit for developers. 47 tools. Zero servers. Zero signup.
+            A privacy-first toolkit for developers. 55 tools. Zero servers. Zero signup.
           </p>
         </div>
 

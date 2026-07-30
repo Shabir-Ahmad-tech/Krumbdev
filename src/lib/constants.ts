@@ -700,6 +700,118 @@ export const TOOLS: Tool[] = [
     buildPriority: 1,
     proFeature: 'AI-powered pattern inference, batch generation, export to multiple languages',
     color: 'amber'
+  },
+  {
+    slug: 'chmod-calculator',
+    name: 'Linux Chmod & Permissions Calculator',
+    description: 'Calculate Linux chmod numeric octal permissions and symbolic notation. Toggle Read, Write, and Execute checkboxes for User, Group, and Others with terminal command generator.',
+    shortDescription: 'Calculate Linux chmod octal permissions & commands',
+    category: 'developer-tools',
+    icon: 'ShieldCheck',
+    searchKeyword: 'chmod calculator linux permissions octal',
+    monthlySearches: 250000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'Recursive permission flags, ACL generator, SSH key permission presets',
+    color: 'emerald'
+  },
+  {
+    slug: 'string-escape-unescape',
+    name: 'String Escaper & Unescaper',
+    description: 'Escape and unescape text strings for JavaScript, JSON, HTML entities, XML, SQL, and CSV. Escape quotes, backslashes, newlines, and special characters online.',
+    shortDescription: 'Escape and unescape strings for JS, HTML, XML, SQL',
+    category: 'developer-tools',
+    icon: 'Code',
+    searchKeyword: 'string escape unescape html entities json sql',
+    monthlySearches: 180000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'Multi-language snippet exporter, unicode escape sequences, batch text formatting',
+    color: 'blue'
+  },
+  {
+    slug: 'json-schema-generator',
+    name: 'JSON Schema Generator & Validator',
+    description: 'Generate Draft-07 and Draft 2020-12 JSON Schemas automatically from JSON objects. Validate JSON data against schemas, infer property types, formats, and required keys.',
+    shortDescription: 'Generate & validate JSON Schema from JSON objects',
+    category: 'developer-tools',
+    icon: 'FileCode',
+    searchKeyword: 'json schema generator validator draft-07 2020-12',
+    monthlySearches: 220000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'TypeScript type generation from schema, openAPI schema export, schema diff tool',
+    color: 'violet'
+  },
+  {
+    slug: 'jwt-generator',
+    name: 'JWT Generator & Signer',
+    description: 'Generate and sign custom JSON Web Tokens (JWT) locally for testing APIs. Configure header, payload claims (iss, sub, exp, iat), HMAC algorithms (HS256, HS384, HS512), and secret keys.',
+    shortDescription: 'Generate and sign custom JWT tokens locally',
+    category: 'developer-tools',
+    icon: 'Key',
+    searchKeyword: 'jwt generator signer hmac hs256 test token',
+    monthlySearches: 310000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'RSA/ECDSA asymmetric key signing (RS256/ES256), JWKS mock generator, authorization header builder',
+    color: 'indigo'
+  },
+  {
+    slug: 'csv-to-sql-converter',
+    name: 'CSV to SQL Insert Converter',
+    description: 'Convert CSV data into SQL INSERT INTO queries. Supports MySQL, PostgreSQL, SQLite, MS SQL Server, and Oracle dialects with auto type detection and custom table names.',
+    shortDescription: 'Convert CSV tables to SQL INSERT statements',
+    category: 'developer-tools',
+    icon: 'Database',
+    searchKeyword: 'csv to sql converter insert queries mysql postgres sqlite',
+    monthlySearches: 240000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'Batch insert chunking, schema generator, NULL value handling options',
+    color: 'blue'
+  },
+  {
+    slug: 'markdown-to-html-converter',
+    name: 'Markdown to HTML Converter',
+    description: 'Convert Markdown to clean HTML markup and HTML back to Markdown online. Real-time side-by-side preview with custom heading ID options and file downloads.',
+    shortDescription: 'Convert Markdown ↔ HTML with live preview',
+    category: 'developer-tools',
+    icon: 'FileText',
+    searchKeyword: 'markdown to html converter HTML to markdown',
+    monthlySearches: 290000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'GitHub Flavored Markdown (GFM) tables, syntax highlighted code blocks, PDF export',
+    color: 'indigo'
+  },
+  {
+    slug: 'url-parser',
+    name: 'URL Parser & Query Extractor',
+    description: 'Parse URLs into protocol, hostname, port, pathname, search params, and hash. Inspect and edit query string parameters in a clean table with auto URL decoding.',
+    shortDescription: 'Parse URLs and extract query string parameters',
+    category: 'developer-tools',
+    icon: 'Link',
+    searchKeyword: 'url parser query string extractor decode parameters',
+    monthlySearches: 210000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'URL builder, nested param parser, bulk URL parsing',
+    color: 'slate'
+  },
+  {
+    slug: 'base64-image-converter',
+    name: 'Base64 to Image Converter',
+    description: 'Convert images (PNG, JPG, SVG, WebP, GIF) to Base64 Data URIs and decode Base64 strings directly into downloadable image files with dimension & transparency details.',
+    shortDescription: 'Convert images to Base64 & Base64 to image files',
+    category: 'developer-tools',
+    icon: 'ImageIcon',
+    searchKeyword: 'base64 to image converter image to base64 data uri',
+    monthlySearches: 420000,
+    competition: 'low',
+    buildPriority: 1,
+    proFeature: 'Batch image converter, CSS background-image snippet generator, WebP optimizer',
+    color: 'violet'
   }
 ]
 
@@ -766,7 +878,15 @@ export const BUILT_TOOLS = [
   'markdown-beautifier',
   'ip-address-lookup',
   'cron-translator',
-  'regex-generator'
+  'regex-generator',
+  'chmod-calculator',
+  'string-escape-unescape',
+  'json-schema-generator',
+  'jwt-generator',
+  'csv-to-sql-converter',
+  'markdown-to-html-converter',
+  'url-parser',
+  'base64-image-converter'
 ]
 
 // Featured tools shown on the home page (top 12 only)

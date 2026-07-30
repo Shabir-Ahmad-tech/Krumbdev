@@ -35,9 +35,9 @@ const toolCategories = [
         desc: 'Compare two blocks of text or code side by side and see additions, removals, and changes highlighted. Supports ignore whitespace mode and file upload. Essential for code review, configuration comparison, and debugging content changes.',
       },
       {
-        slug: 'markdown-beautifier',
-        name: 'Markdown Beautifier',
-        desc: 'Beautify and clean up messy markdown. Fix malformed tables, normalize spacing and indentation, correct bold/italic formatting, normalize horizontal rules, and optionally add language hints to code blocks. Free client-side tool.',
+        slug: 'json-schema-generator',
+        name: 'JSON Schema Generator & Validator',
+        desc: 'Generate Draft-07 and Draft 2020-12 JSON Schemas automatically from JSON objects. Infer types, format, and required key constraints.',
       },
     ],
   },
@@ -48,7 +48,12 @@ const toolCategories = [
       {
         slug: 'base64-encoder',
         name: 'Base64 Encoder / Decoder',
-        desc: 'Encode text or files to Base64 and decode Base64 back to readable text. Supports file upload with preview. Handles large payloads comfortably. Commonly used for embedding binary data in web pages, API payloads, and data URLs.',
+        desc: 'Encode text or files to Base64 and decode Base64 back to readable text or original binary files (PNG, JPG, PDF, ZIP, MP3). Supports file upload with live preview.',
+      },
+      {
+        slug: 'string-escape-unescape',
+        name: 'String Escaper & Unescaper',
+        desc: 'Escape and unescape text strings for JavaScript/JSON, HTML Entities, XML, SQL, and CSV. Copy safe escaped string snippets directly into source code.',
       },
       {
         slug: 'url-encoder',
@@ -66,9 +71,24 @@ const toolCategories = [
         desc: 'Convert between binary, decimal, octal, and hexadecimal number systems. Includes ASCII text to binary conversion and bitwise utility operations. Handy for low-level debugging, embedded systems work, and understanding how data is represented in memory.',
       },
       {
-        slug: 'json-csv-converter',
-        name: 'JSON ↔ CSV Converter',
-        desc: 'Convert JSON arrays of objects to CSV and CSV back to JSON. Handles nested objects, custom delimiters, and large datasets. Perfect for migrating data between databases, spreadsheets, and API payloads.',
+        slug: 'csv-to-sql-converter',
+        name: 'CSV to SQL Insert Converter',
+        desc: 'Convert CSV data into SQL INSERT INTO queries for MySQL, PostgreSQL, SQLite, MS SQL Server, and Oracle with auto-type detection.',
+      },
+      {
+        slug: 'markdown-to-html-converter',
+        name: 'Markdown to HTML Converter',
+        desc: 'Convert Markdown to clean HTML markup or convert HTML back into Markdown with live preview.',
+      },
+      {
+        slug: 'base64-image-converter',
+        name: 'Base64 to Image Converter',
+        desc: 'Convert images (PNG, JPG, SVG, WebP) directly to Base64 Data URIs or decode Base64 strings to downloadable image files.',
+      },
+      {
+        slug: 'url-parser',
+        name: 'URL Parser & Query Extractor',
+        desc: 'Deconstruct URLs into protocol, host, pathname, query parameters, and hash with live search parameter editor.',
       },
       {
         slug: 'yaml-json-converter',
@@ -81,6 +101,11 @@ const toolCategories = [
     name: 'Security & Cryptography Tools',
     description: 'Generate secure credentials, inspect tokens, and compute hashes entirely in your browser using the Web Crypto API.',
     tools: [
+      {
+        slug: 'chmod-calculator',
+        name: 'Linux Chmod & Permissions Calculator',
+        desc: 'Calculate Linux chmod numeric octal permissions and symbolic notation. Toggle Read, Write, and Execute checkboxes for User, Group, and Others with terminal command generator.',
+      },
       {
         slug: 'password-generator',
         name: 'Password Generator',
@@ -95,6 +120,11 @@ const toolCategories = [
         slug: 'jwt-decoder',
         name: 'JWT Decoder',
         desc: 'Decode the header and payload of any JSON Web Token. View claims like issuer (iss), subject (sub), expiration (exp), and custom claims. Shows an automatic expiry countdown. Useful for debugging OAuth flows, verifying token contents, and inspecting authentication headers.',
+      },
+      {
+        slug: 'jwt-generator',
+        name: 'JWT Token Generator & Signer',
+        desc: 'Generate and sign custom JSON Web Tokens (JWT) locally for testing APIs. Configure header, payload claims (iss, sub, exp, iat), HMAC algorithms (HS256, HS384, HS512), and secret keys.',
       },
       {
         slug: 'uuid-generator',
