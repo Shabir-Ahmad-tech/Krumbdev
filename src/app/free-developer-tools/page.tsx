@@ -169,6 +169,16 @@ const toolCategories = [
         name: 'cURL → Code Converter',
         desc: 'Convert a cURL command into ready-to-use code snippets for JavaScript fetch, Axios, Python requests, and Go. Parses URL, method, headers, and body from the cURL string. Saves time when translating API examples from documentation into your language of choice.',
       },
+      {
+        slug: 'json-code-generator',
+        name: 'JSON Path & Code Generator',
+        desc: 'Select properties from raw JSON payloads and instantly generate property extraction code in Python, JavaScript, Java, C++, C#, Go, Rust, and PHP.',
+      },
+      {
+        slug: 'log-cleaner',
+        name: 'Log Cleaner & PII Redactor',
+        desc: 'Sanitize terminal logs and server stack traces before pasting into ChatGPT or Claude. Redacts API keys, Bearer tokens, AWS secrets, passwords, and PII 100% locally.',
+      },
     ],
   },
   {

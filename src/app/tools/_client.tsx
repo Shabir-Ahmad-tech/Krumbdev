@@ -37,6 +37,8 @@ const TOOL_TAGS: Record<string, string[]> = {
   'css-grid-generator': ['code', 'design'],
   'iban-validator': ['data', 'validate'],
   'dns-ssl-checker': ['api', 'security'],
+  'json-code-generator': ['data', 'code', 'convert'],
+  'log-cleaner': ['text', 'security', 'api'],
 }
 
 const CATEGORIES = [
