@@ -5,7 +5,7 @@
 <h1 align="center">KRUMB.DEV</h1>
 
 <p align="center">
-  <strong>47 Developer Tools · Zero Signup · Zero Upload · Zero Tracking</strong>
+  <strong>49 Developer Tools · Zero Signup · Zero Upload · Zero Tracking</strong>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-live-00FF41?style=flat-square" />
-  <img src="https://img.shields.io/badge/tools-47-000000?style=flat-square" />
+  <img src="https://img.shields.io/badge/tools-49-000000?style=flat-square" />
   <img src="https://img.shields.io/badge/license-MIT-000000?style=flat-square" />
   <img src="https://img.shields.io/badge/privacy-first-00FF41?style=flat-square" />
 </p>
@@ -37,7 +37,7 @@ Most developer tool websites share the same pattern: create an account, hit a ra
 | Your data is sent to a server for processing | **Everything runs in your browser — 100% client-side** |
 | Sign up required for basic features | **Zero accounts. Open the page, use the tool.** |
 | Ads, popups, and upgrade prompts | **Clean terminal interface. No distractions.** |
-| One tool, one bookmark, one tab | **47 tools at a single URL** |
+| One tool, one bookmark, one tab | **49 tools at a single URL** |
 | Unknown data retention policies | **Your data never leaves your device** |
 
 ### Privacy, explained plainly

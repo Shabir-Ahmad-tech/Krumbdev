@@ -72,6 +72,34 @@ export const TOOLS: Tool[] = [
     color: 'blue'
   },
   {
+    slug: 'log-cleaner',
+    name: 'Log Cleaner & PII Redactor',
+    description: 'Sanitize terminal logs and server output before pasting into ChatGPT, Claude, or DeepSeek. Automatically redacts API keys, Bearer tokens, AWS secrets, passwords, IPs, and PII.',
+    shortDescription: 'Sanitize logs & redact API keys/PII for AI',
+    category: 'developer-tools',
+    icon: 'ShieldCheck',
+    searchKeyword: 'log cleaner pii redactor sanitize log api key bearer token chatgpt claude',
+    monthlySearches: 350000,
+    competition: 'low',
+    buildPriority: 5,
+    proFeature: 'Custom regex redaction rules, batch log sanitization',
+    color: 'emerald'
+  },
+  {
+    slug: 'json-code-generator',
+    name: 'JSON Path & Code Generator',
+    description: 'Pick any property or value from a JSON object and instantly generate access code snippets in Python, JavaScript, Java, C++, C#, Go, Rust, and PHP.',
+    shortDescription: 'Generate JSON access code in 8+ languages',
+    category: 'developer-tools',
+    icon: 'Code',
+    searchKeyword: 'json path code generator python java javascript c++',
+    monthlySearches: 450000,
+    competition: 'low',
+    buildPriority: 5,
+    proFeature: 'Multi-property selection, nested JSON pathing, batch export',
+    color: 'emerald'
+  },
+  {
     slug: 'json-formatter',
     name: 'JSON Formatter',
     description: 'Format, validate, and beautify JSON data online. Paste your JSON and get properly indented output instantly. No server upload needed.',
@@ -755,6 +783,8 @@ export const FEATURED_TOOLS = [
   'sql-formatter',
   'js-minifier',
   'css-gradient-generator',
+  'json-code-generator',
+  'log-cleaner',
 ]
 
 // Curated related-tool pairs for intelligent cross-linking
@@ -762,7 +792,9 @@ export const FEATURED_TOOLS = [
 // Tools not listed fall back to random built tools.
 export const RELATED_TOOLS: Record<string, string[]> = {
   // ── Formatters & Beautifiers ──
-  'json-formatter': ['code-formatter', 'yaml-json-converter', 'json-csv-converter', 'sql-formatter', 'regex-tester'],
+  'log-cleaner': ['json-formatter', 'code-formatter', 'jwt-decoder', 'base64-encoder', 'diff-checker'],
+  'json-code-generator': ['json-formatter', 'json-to-typescript', 'json-csv-converter', 'code-formatter', 'curl-to-code'],
+  'json-formatter': ['json-code-generator', 'code-formatter', 'yaml-json-converter', 'json-csv-converter', 'sql-formatter', 'regex-tester'],
   'code-formatter': ['json-formatter', 'js-minifier', 'html-minifier', 'diff-checker', 'html-to-jsx-converter', 'markdown-beautifier'],
   'diff-checker': ['code-formatter', 'json-formatter', 'regex-tester', 'json-csv-converter'],
   'sql-formatter': ['json-formatter', 'code-formatter', 'yaml-json-converter', 'yaml-json-converter'],

@@ -72,6 +72,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  manifest: "/manifest.json",
   other: {
     "google-site-verification": "OsByC5U9E_rZJIyOy0mqbaK7uLm9CbOzQnXUpbI6Wb8",
   },

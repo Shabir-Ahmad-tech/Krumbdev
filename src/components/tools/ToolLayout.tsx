@@ -49,9 +49,15 @@ export function ToolLayout({
           </TerminalButton>
 
           <div className="pt-2">
-            <h1 className="text-xl md:text-3xl font-heading font-bold text-[#F9F9F9] mb-1 leading-snug">
-              {title}
-            </h1>
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+              <h1 className="text-xl md:text-3xl font-heading font-bold text-[#F9F9F9] leading-snug">
+                {title}
+              </h1>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-mono text-[#00FF41] bg-[#001f08] border border-[#00FF41]/40 rounded-none shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00FF41] animate-pulse" />
+                🔒 100% Client-Side · Offline Ready
+              </span>
+            </div>
             <p className="text-[#888888] text-xs md:text-sm font-mono leading-relaxed">
               {description}
             </p>

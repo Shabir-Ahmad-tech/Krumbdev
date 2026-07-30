@@ -1,0 +1,17 @@
+{
+  "name": "KRUMB.DEV — Privacy-First Developer Tools",
+  "short_name": "KRUMB.DEV",
+  "description": "48 free developer tools running 100% client-side in your browser. JSON Formatter, JWT Decoder, Regex Tester, Code Beautifier & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00FF41",
+  "icons": [
+    {
+      "src": "/krumb-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
